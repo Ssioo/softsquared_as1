@@ -18,7 +18,7 @@
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="0dp"
+            android:layout_marginStart="12dp"
             android:layout_marginTop="0dp">
 
             <ImageView
@@ -70,7 +70,7 @@
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
             android:layout_marginTop="0dp"
-            android:layout_marginEnd="8dp"
+            android:layout_marginEnd="12dp"
             android:layout_marginBottom="0dp"
             app:srcCompat="@drawable/ic_more_vert" />
 
@@ -84,6 +84,7 @@
             android:id="@+id/img1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
             app:srcCompat="@drawable/insta_image1" />
 
         <ImageView
@@ -91,8 +92,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|left"
-            android:layout_marginLeft="8dp"
-            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginBottom="12dp"
             android:scaleType="centerInside"
             app:srcCompat="@drawable/ic_person_tag" />
 
@@ -117,8 +118,7 @@
     <RelativeLayout
         android:id="@+id/bottom_icons"
         android:layout_width="match_parent"
-        android:layout_height="36dp"
-        android:paddingTop="8dp">
+        android:layout_height="44dp">
 
         <ImageView
             android:id="@+id/icon_heart"
@@ -173,7 +173,7 @@
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
             android:layout_centerVertical="true"
-            android:layout_marginRight="8dp"
+            android:layout_marginRight="12dp"
             android:background="@android:color/transparent"
             android:scaleType="centerInside"
             app:srcCompat="@drawable/ic_bookmark" />
@@ -201,6 +201,7 @@
             android:layout_height="18dp"
             android:layout_marginStart="-6dp"
             android:layout_toEndOf="@id/profile_comment1"
+            android:scaleType="centerInside"
             app:srcCompat="@drawable/person_profile2" />
 
         <ImageView
@@ -209,6 +210,7 @@
             android:layout_height="18dp"
             android:layout_alignParentStart="true"
             android:layout_marginStart="12dp"
+            android:scaleType="centerInside"
             app:srcCompat="@drawable/person_profile1" />
 
         <TextView
@@ -278,22 +280,21 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginStart="12dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginEnd="12dp"
         android:stretchColumns="1">
 
         <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
             android:id="@+id/comment1"
-            >
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
             <TextView
                 android:id="@+id/nickname_comment1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="l_zieun"
-                android:textStyle="bold"
-                android:textColor="@android:color/black" />
+                android:textColor="@android:color/black"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/comment_description1"
@@ -309,22 +310,23 @@
                 android:id="@+id/favorite_on_comment1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|end"
                 android:layout_marginEnd="12dp"
                 app:srcCompat="@drawable/ic_favorite_small_full" />
         </TableRow>
 
         <TableRow
+            android:id="@+id/comment2"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/comment2">
+            android:layout_height="match_parent">
 
             <TextView
                 android:id="@+id/nickname_comment2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="woo-cheol"
-                android:textStyle="bold"
-                android:textColor="@android:color/black" />
+                android:textColor="@android:color/black"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/comment_description2"
@@ -340,22 +342,23 @@
                 android:id="@+id/favorite_on_comment2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|end"
                 android:layout_marginEnd="12dp"
                 app:srcCompat="@drawable/ic_favorite_small_full" />
         </TableRow>
 
         <TableRow
+            android:id="@+id/comment5"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/comment5">
+            android:layout_height="match_parent">
 
             <TextView
                 android:id="@+id/nickname_comment5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="sunaang_sue"
-                android:textStyle="bold"
-                android:textColor="@android:color/black" />
+                android:textColor="@android:color/black"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/comment_description5"
@@ -371,6 +374,7 @@
                 android:id="@+id/favorite_on_comment5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|end"
                 android:layout_marginEnd="12dp"
                 app:srcCompat="@drawable/ic_favorite_small_full" />
         </TableRow>
