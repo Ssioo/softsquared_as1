@@ -6,11 +6,11 @@
     android:layout_height="match_parent">
 
 
-
     <ScrollView
         android:id="@+id/article_container_scroll"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
 
         <LinearLayout
             android:id="@+id/article_container"
@@ -21,7 +21,8 @@
             <HorizontalScrollView
                 android:id="@+id/story_container_scroll"
                 android:layout_width="match_parent"
-                android:layout_height="88dp">
+                android:layout_height="88dp"
+                android:scrollbars="none">
 
                 <LinearLayout
                     android:id="@+id/story_container"
@@ -177,7 +178,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="bottom|center_horizontal"
-                            android:text="hakkkyung_23"
+                            android:text="hakkkyung"
                             android:textColor="@android:color/black"
                             android:textSize="10sp" />
                     </FrameLayout>
@@ -303,6 +304,8 @@
             <include layout="@layout/post_full2" />
 
             <include layout="@layout/post_full" />
+
+            <include layout="@layout/post_full2" />
         </LinearLayout>
     </ScrollView>
 

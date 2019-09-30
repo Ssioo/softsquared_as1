@@ -266,61 +266,77 @@
         android:layout_marginBottom="4dp"
         android:text="댓글 16개 모두 보기" />
 
-    <RelativeLayout
-        android:id="@+id/comment_container1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <TextView
-            android:id="@+id/comment1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_marginStart="12dp"
-            android:layout_marginEnd="4dp"
-            android:layout_marginBottom="4dp"
-            android:layout_toStartOf="@id/favorite_on_comment1"
-            android:text="ji_young.v 이쁘다♡"
-            android:textColor="@android:color/black" />
-
-        <ImageView
-            android:id="@+id/favorite_on_comment1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_centerVertical="true"
-            android:layout_marginEnd="12dp"
-            app:srcCompat="@drawable/ic_favorite_small_full" />
-
-    </RelativeLayout>
-
-    <RelativeLayout
+    <TableLayout
         android:id="@+id/comment_container2"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="8dp"
+        android:stretchColumns="1">
 
-        <TextView
-            android:id="@+id/comment2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_marginStart="12dp"
-            android:layout_marginEnd="4dp"
-            android:layout_marginBottom="4dp"
-            android:layout_toStartOf="@id/favorite_on_comment2"
-            android:text="window-il @hem._ni 나도"
-            android:textColor="@android:color/black" />
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/comment3">
 
-        <ImageView
-            android:id="@+id/favorite_on_comment2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_centerVertical="true"
-            android:layout_marginEnd="12dp"
-            app:srcCompat="@drawable/ic_favorite_small_full" />
+            <TextView
+                android:id="@+id/nickname_comment3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ji_young.v"
+                android:textStyle="bold"
+                android:textColor="@android:color/black" />
 
-    </RelativeLayout>
+            <TextView
+                android:id="@+id/comment_description3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="4dp"
+                android:text="이쁘다♡"
+                android:textColor="@android:color/black" />
+
+            <ImageView
+                android:id="@+id/favorite_on_comment3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="12dp"
+                app:srcCompat="@drawable/ic_favorite_small_full" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/comment4">
+
+            <TextView
+                android:id="@+id/nickname_comment4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="window-il"
+                android:textStyle="bold"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/comment_description4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="4dp"
+                android:text="@hem._ni 나도"
+                android:textColor="@android:color/black" />
+
+            <ImageView
+                android:id="@+id/favorite_on_comment4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="12dp"
+                app:srcCompat="@drawable/ic_favorite_small_full" />
+        </TableRow>
+
+    </TableLayout>
 
     <TextView
         android:id="@+id/date_of_article"

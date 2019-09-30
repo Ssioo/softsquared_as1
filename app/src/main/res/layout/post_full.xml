@@ -273,61 +273,109 @@
         android:layout_marginBottom="4dp"
         android:text="댓글 16개 모두 보기" />
 
-    <RelativeLayout
+    <TableLayout
         android:id="@+id/comment_container1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="8dp"
+        android:stretchColumns="1">
 
-        <TextView
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:id="@+id/comment1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_marginStart="12dp"
-            android:layout_marginEnd="4dp"
-            android:layout_marginBottom="4dp"
-            android:layout_toStartOf="@id/favorite_on_comment1"
-            android:text="l_zieun 헐 나 이번 방학때 하려 하는데 어때ㅜㅜ"
-            android:textColor="@android:color/black" />
+            >
 
-        <ImageView
-            android:id="@+id/favorite_on_comment1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_centerVertical="true"
-            android:layout_marginEnd="12dp"
-            app:srcCompat="@drawable/ic_favorite_small_full" />
+            <TextView
+                android:id="@+id/nickname_comment1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="l_zieun"
+                android:textStyle="bold"
+                android:textColor="@android:color/black" />
 
-    </RelativeLayout>
+            <TextView
+                android:id="@+id/comment_description1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="4dp"
+                android:text="헐 나 이번 방학때 하려 하는데 어때ㅜㅜ"
+                android:textColor="@android:color/black" />
 
-    <RelativeLayout
-        android:id="@+id/comment_container2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/favorite_on_comment1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="12dp"
+                app:srcCompat="@drawable/ic_favorite_small_full" />
+        </TableRow>
 
-        <TextView
-            android:id="@+id/comment2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_marginStart="12dp"
-            android:layout_marginEnd="4dp"
-            android:layout_marginBottom="4dp"
-            android:layout_toStartOf="@id/favorite_on_comment2"
-            android:text="woo-cheol ㅋㅋㅋㅋ재밌겠다 연우 이런것도하네"
-            android:textColor="@android:color/black" />
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/comment2">
 
-        <ImageView
-            android:id="@+id/favorite_on_comment2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_centerVertical="true"
-            android:layout_marginEnd="12dp"
-            app:srcCompat="@drawable/ic_favorite_small_full" />
+            <TextView
+                android:id="@+id/nickname_comment2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="woo-cheol"
+                android:textStyle="bold"
+                android:textColor="@android:color/black" />
 
-    </RelativeLayout>
+            <TextView
+                android:id="@+id/comment_description2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="4dp"
+                android:text=" ㅋㅋㅋㅋ재밌겠다 연우 이런것도하네"
+                android:textColor="@android:color/black" />
+
+            <ImageView
+                android:id="@+id/favorite_on_comment2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="12dp"
+                app:srcCompat="@drawable/ic_favorite_small_full" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/comment5">
+
+            <TextView
+                android:id="@+id/nickname_comment5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="sunaang_sue"
+                android:textStyle="bold"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/comment_description5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="4dp"
+                android:text=" 설마가 사람잡...bb"
+                android:textColor="@android:color/black" />
+
+            <ImageView
+                android:id="@+id/favorite_on_comment5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="12dp"
+                app:srcCompat="@drawable/ic_favorite_small_full" />
+        </TableRow>
+
+    </TableLayout>
 
     <TextView
         android:id="@+id/date_of_article"
