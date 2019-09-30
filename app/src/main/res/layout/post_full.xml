@@ -18,14 +18,14 @@
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="12dp"
+            android:layout_marginStart="10dp"
             android:layout_marginTop="0dp">
 
             <ImageView
                 android:id="@+id/profile_bound_storyOn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="4dp"
+                android:layout_margin="5dp"
                 app:srcCompat="@drawable/profile_bound_story_on" />
 
             <ImageView
@@ -59,7 +59,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="0dp"
                 android:layout_marginTop="0dp"
-                android:text="Seoul, Korea" />
+                android:text="Seoul, Korea"
+                android:textColor="@android:color/black"
+                android:textSize="12sp" />
         </LinearLayout>
 
         <ImageView
@@ -263,7 +265,7 @@
         android:layout_marginStart="12dp"
         android:layout_marginTop="4dp"
         android:layout_marginEnd="12dp"
-        android:text="yeonyu.yeonu 2018.08.26~08.28\n단양2박3일여행... 더 보기"
+        android:text="@string/text_article1"
         android:textColor="@android:color/black" />
 
     <TextView

@@ -8,13 +8,16 @@
 
     <HorizontalScrollView
         android:layout_width="match_parent"
-        android:layout_height="24dp"
+        android:layout_height="36dp"
         android:scrollbars="none">
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:orientation="horizontal">
+            android:background="#FAFAFA"
+            android:orientation="horizontal"
+            android:paddingTop="6dp"
+            android:paddingBottom="6dp">
 
             <TextView
                 android:id="@+id/textView"
@@ -151,13 +154,9 @@
     <androidx.gridlayout.widget.GridLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="4dp"
-        android:layoutMode="opticalBounds"
         app:columnCount="3"
         app:orientation="horizontal"
-        app:useDefaultMargins="true">
+        app:useDefaultMargins="false">
 
         <FrameLayout
             android:layout_width="0dp"
