@@ -21,7 +21,7 @@
             <HorizontalScrollView
                 android:id="@+id/story_container_scroll"
                 android:layout_width="match_parent"
-                android:layout_height="88dp"
+                android:layout_height="104dp"
                 android:scrollbars="none">
 
                 <LinearLayout
@@ -34,8 +34,8 @@
 
                     <FrameLayout
                         android:id="@+id/story_of_person1"
-                        android:layout_width="64dp"
-                        android:layout_height="80dp"
+                        android:layout_width="72dp"
+                        android:layout_height="96dp"
                         android:layout_marginHorizontal="4dp">
 
                         <ImageView
@@ -55,8 +55,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="bottom|right"
-                            android:layout_marginRight="6dp"
-                            android:layout_marginBottom="18dp"
+                            android:layout_marginRight="8dp"
+                            android:layout_marginBottom="22dp"
                             app:srcCompat="@drawable/ic_add_circle_small" />
 
                         <TextView
@@ -66,13 +66,13 @@
                             android:layout_gravity="bottom|center_horizontal"
                             android:text="내 스토리"
                             android:textColor="@android:color/black"
-                            android:textSize="10sp" />
+                            android:textSize="11sp" />
                     </FrameLayout>
 
                     <FrameLayout
                         android:id="@+id/story_of_person2"
-                        android:layout_width="64dp"
-                        android:layout_height="80dp"
+                        android:layout_width="72dp"
+                        android:layout_height="96dp"
                         android:layout_marginHorizontal="4dp">
 
                         <ImageView
@@ -104,13 +104,13 @@
                             android:layout_gravity="bottom|center_horizontal"
                             android:text="hem._ni"
                             android:textColor="@android:color/black"
-                            android:textSize="10sp" />
+                            android:textSize="11sp" />
                     </FrameLayout>
 
                     <FrameLayout
                         android:id="@+id/story_of_person3"
-                        android:layout_width="64dp"
-                        android:layout_height="80dp"
+                        android:layout_width="72dp"
+                        android:layout_height="96dp"
                         android:layout_marginHorizontal="4dp">
 
                         <ImageView
@@ -142,13 +142,13 @@
                             android:layout_gravity="bottom|center_horizontal"
                             android:text="sunwo0kim"
                             android:textColor="@android:color/black"
-                            android:textSize="10sp" />
+                            android:textSize="11sp" />
                     </FrameLayout>
 
                     <FrameLayout
                         android:id="@+id/story_of_person4"
-                        android:layout_width="64dp"
-                        android:layout_height="80dp"
+                        android:layout_width="72dp"
+                        android:layout_height="96dp"
                         android:layout_marginHorizontal="4dp">
 
                         <ImageView
@@ -178,15 +178,15 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="bottom|center_horizontal"
-                            android:text="hakkkyung"
+                            android:text="hakkkyung_23"
                             android:textColor="@android:color/black"
-                            android:textSize="10sp" />
+                            android:textSize="11sp" />
                     </FrameLayout>
 
                     <FrameLayout
                         android:id="@+id/story_of_person5"
-                        android:layout_width="64dp"
-                        android:layout_height="80dp"
+                        android:layout_width="72dp"
+                        android:layout_height="96dp"
                         android:layout_marginHorizontal="4dp">
 
                         <ImageView
@@ -218,13 +218,13 @@
                             android:layout_gravity="bottom|center_horizontal"
                             android:text="woob1n"
                             android:textColor="@android:color/black"
-                            android:textSize="10sp" />
+                            android:textSize="11sp" />
                     </FrameLayout>
 
                     <FrameLayout
                         android:id="@+id/story_of_person6"
-                        android:layout_width="64dp"
-                        android:layout_height="80dp"
+                        android:layout_width="72dp"
+                        android:layout_height="96dp"
                         android:layout_marginHorizontal="4dp">
 
                         <ImageView
@@ -256,13 +256,13 @@
                             android:layout_gravity="bottom|center_horizontal"
                             android:text="uiii_ryeong"
                             android:textColor="@android:color/black"
-                            android:textSize="10sp" />
+                            android:textSize="11sp" />
                     </FrameLayout>
 
                     <FrameLayout
                         android:id="@+id/story_of_person7"
-                        android:layout_width="64dp"
-                        android:layout_height="80dp"
+                        android:layout_width="72dp"
+                        android:layout_height="96dp"
                         android:layout_marginHorizontal="4dp">
 
                         <ImageView
@@ -294,7 +294,7 @@
                             android:layout_gravity="bottom|center_horizontal"
                             android:text="everyevery"
                             android:textColor="@android:color/black"
-                            android:textSize="10sp" />
+                            android:textSize="11sp" />
                     </FrameLayout>
                 </LinearLayout>
             </HorizontalScrollView>

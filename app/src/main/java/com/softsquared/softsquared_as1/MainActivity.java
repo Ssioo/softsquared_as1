@@ -14,7 +14,6 @@ public class MainActivity extends AppCompatActivity {
 
     private BottomNavigationView bottomNavigationView;
     private FragmentManager fragmentManager = getSupportFragmentManager();
-    private Fragment_heart fragment_heart = new Fragment_heart();
     private Fragment_home fragment_home = new Fragment_home();
     private Fragment_mypage fragment_mypage = new Fragment_mypage();
     private Frament_search fragment_search = new Frament_search();
@@ -38,9 +37,6 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case R.id.item_search:
                         fragmentManager.beginTransaction().replace(R.id.framelayout, fragment_search).commitAllowingStateLoss();
-                        break;
-                    case R.id.item_heart:
-                        fragmentManager.beginTransaction().replace(R.id.framelayout, fragment_heart).commitAllowingStateLoss();
                         break;
                     case R.id.item_mypage:
                         fragmentManager.beginTransaction().replace(R.id.framelayout, fragment_mypage).commitAllowingStateLoss();

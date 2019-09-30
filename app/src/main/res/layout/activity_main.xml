@@ -24,7 +24,7 @@
         android:id="@+id/top_bar"
         android:layout_width="match_parent"
         android:layout_height="48dp"
-        android:background="#ffffff"
+        android:background="#FAFAFA"
         android:elevation="5dp"
         app:layout_constraintTop_toTopOf="parent">
 
