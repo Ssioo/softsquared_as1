@@ -22,12 +22,12 @@ public class Fragment_home extends Fragment {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
 
         /* findViewById */
-        profile = view.findViewById(R.id.profile);
+        //profile = view.findViewById(R.id.profile);
 
 
         /* profile */
-        profile.setBackground(new ShapeDrawable(new OvalShape()));
-        profile.setClipToOutline(true);
+        //profile.setBackground(new ShapeDrawable(new OvalShape()));
+        //profile.setClipToOutline(true);
 
         return view;
     }

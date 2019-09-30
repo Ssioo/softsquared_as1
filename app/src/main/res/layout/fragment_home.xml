@@ -1,6 +1,309 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
+
+
+
+    <ScrollView
+        android:id="@+id/article_container_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/article_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <HorizontalScrollView
+                android:id="@+id/story_container_scroll"
+                android:layout_width="match_parent"
+                android:layout_height="88dp">
+
+                <LinearLayout
+                    android:id="@+id/story_container"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:orientation="horizontal">
+
+                    <FrameLayout
+                        android:id="@+id/story_of_person1"
+                        android:layout_width="64dp"
+                        android:layout_height="80dp"
+                        android:layout_marginHorizontal="4dp">
+
+                        <ImageView
+                            android:id="@+id/story_profile_img1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal|top"
+                            android:layout_marginStart="6dp"
+                            android:layout_marginTop="0dp"
+                            android:layout_marginEnd="6dp"
+                            android:layout_marginBottom="16dp"
+                            android:scaleType="centerInside"
+                            app:srcCompat="@drawable/profile" />
+
+                        <ImageView
+                            android:id="@+id/icon_story_plus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom|right"
+                            android:layout_marginRight="6dp"
+                            android:layout_marginBottom="18dp"
+                            app:srcCompat="@drawable/ic_add_circle_small" />
+
+                        <TextView
+                            android:id="@+id/story_profile_id1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom|center_horizontal"
+                            android:text="내 스토리"
+                            android:textColor="@android:color/black"
+                            android:textSize="10sp" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/story_of_person2"
+                        android:layout_width="64dp"
+                        android:layout_height="80dp"
+                        android:layout_marginHorizontal="4dp">
+
+                        <ImageView
+                            android:id="@+id/story_profile_bound1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:layout_marginTop="0dp"
+                            android:layout_marginEnd="4dp"
+                            android:layout_marginBottom="16dp"
+                            app:srcCompat="@drawable/profile_bound_story_on" />
+
+                        <ImageView
+                            android:id="@+id/story_profile_img2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal|top"
+                            android:layout_marginStart="6dp"
+                            android:layout_marginTop="0dp"
+                            android:layout_marginEnd="6dp"
+                            android:layout_marginBottom="16dp"
+                            android:scaleType="centerInside"
+                            app:srcCompat="@drawable/person_profile1" />
+
+                        <TextView
+                            android:id="@+id/story_profile_id2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom|center_horizontal"
+                            android:text="hem._ni"
+                            android:textColor="@android:color/black"
+                            android:textSize="10sp" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/story_of_person3"
+                        android:layout_width="64dp"
+                        android:layout_height="80dp"
+                        android:layout_marginHorizontal="4dp">
+
+                        <ImageView
+                            android:id="@+id/story_profile_bound2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:layout_marginTop="0dp"
+                            android:layout_marginEnd="4dp"
+                            android:layout_marginBottom="16dp"
+                            app:srcCompat="@drawable/profile_bound_story_on" />
+
+                        <ImageView
+                            android:id="@+id/story_profile_img3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal|top"
+                            android:layout_marginStart="6dp"
+                            android:layout_marginTop="0dp"
+                            android:layout_marginEnd="6dp"
+                            android:layout_marginBottom="16dp"
+                            android:scaleType="centerInside"
+                            app:srcCompat="@drawable/person_profile2" />
+
+                        <TextView
+                            android:id="@+id/story_profile_id3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom|center_horizontal"
+                            android:text="sunwo0kim"
+                            android:textColor="@android:color/black"
+                            android:textSize="10sp" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/story_of_person4"
+                        android:layout_width="64dp"
+                        android:layout_height="80dp"
+                        android:layout_marginHorizontal="4dp">
+
+                        <ImageView
+                            android:id="@+id/story_profile_bound3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:layout_marginTop="0dp"
+                            android:layout_marginEnd="4dp"
+                            android:layout_marginBottom="16dp"
+                            app:srcCompat="@drawable/profile_bound_story_on" />
+
+                        <ImageView
+                            android:id="@+id/story_profile_img4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal|top"
+                            android:layout_marginStart="6dp"
+                            android:layout_marginTop="0dp"
+                            android:layout_marginEnd="6dp"
+                            android:layout_marginBottom="16dp"
+                            android:scaleType="centerInside"
+                            app:srcCompat="@drawable/person_profile3" />
+
+                        <TextView
+                            android:id="@+id/story_profile_id4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom|center_horizontal"
+                            android:text="hakkkyung_23"
+                            android:textColor="@android:color/black"
+                            android:textSize="10sp" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/story_of_person5"
+                        android:layout_width="64dp"
+                        android:layout_height="80dp"
+                        android:layout_marginHorizontal="4dp">
+
+                        <ImageView
+                            android:id="@+id/story_profile_bound4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:layout_marginTop="0dp"
+                            android:layout_marginEnd="4dp"
+                            android:layout_marginBottom="16dp"
+                            app:srcCompat="@drawable/profile_bound_story_off" />
+
+                        <ImageView
+                            android:id="@+id/story_profile_img5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal|top"
+                            android:layout_marginStart="6dp"
+                            android:layout_marginTop="0dp"
+                            android:layout_marginEnd="6dp"
+                            android:layout_marginBottom="16dp"
+                            android:scaleType="centerInside"
+                            app:srcCompat="@drawable/person_profile4" />
+
+                        <TextView
+                            android:id="@+id/story_profile_id5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom|center_horizontal"
+                            android:text="woob1n"
+                            android:textColor="@android:color/black"
+                            android:textSize="10sp" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/story_of_person6"
+                        android:layout_width="64dp"
+                        android:layout_height="80dp"
+                        android:layout_marginHorizontal="4dp">
+
+                        <ImageView
+                            android:id="@+id/story_profile_bound5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:layout_marginTop="0dp"
+                            android:layout_marginEnd="4dp"
+                            android:layout_marginBottom="16dp"
+                            app:srcCompat="@drawable/profile_bound_story_off" />
+
+                        <ImageView
+                            android:id="@+id/story_profile_img6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal|top"
+                            android:layout_marginStart="6dp"
+                            android:layout_marginTop="0dp"
+                            android:layout_marginEnd="6dp"
+                            android:layout_marginBottom="16dp"
+                            android:scaleType="centerInside"
+                            app:srcCompat="@drawable/person_profile5" />
+
+                        <TextView
+                            android:id="@+id/story_profile_id6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom|center_horizontal"
+                            android:text="uiii_ryeong"
+                            android:textColor="@android:color/black"
+                            android:textSize="10sp" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/story_of_person7"
+                        android:layout_width="64dp"
+                        android:layout_height="80dp"
+                        android:layout_marginHorizontal="4dp">
+
+                        <ImageView
+                            android:id="@+id/story_profile_bound6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:layout_marginTop="0dp"
+                            android:layout_marginEnd="4dp"
+                            android:layout_marginBottom="16dp"
+                            app:srcCompat="@drawable/profile_bound_story_off" />
+
+                        <ImageView
+                            android:id="@+id/story_profile_img7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal|top"
+                            android:layout_marginStart="6dp"
+                            android:layout_marginTop="0dp"
+                            android:layout_marginEnd="6dp"
+                            android:layout_marginBottom="16dp"
+                            android:scaleType="centerInside"
+                            app:srcCompat="@drawable/person_profile6" />
+
+                        <TextView
+                            android:id="@+id/story_profile_id7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom|center_horizontal"
+                            android:text="everyevery"
+                            android:textColor="@android:color/black"
+                            android:textSize="10sp" />
+                    </FrameLayout>
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <include layout="@layout/post_full" />
+
+            <include layout="@layout/post_full2" />
+
+            <include layout="@layout/post_full" />
+        </LinearLayout>
+    </ScrollView>
 
 </LinearLayout>

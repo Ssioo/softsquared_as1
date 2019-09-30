@@ -7,12 +7,12 @@
     android:paddingBottom="16dp">
 
     <RelativeLayout
-        android:id="@+id/header"
+        android:id="@+id/header2"
         android:layout_width="match_parent"
         android:layout_height="48dp">
 
         <FrameLayout
-            android:id="@+id/profile"
+            android:id="@+id/profile2"
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:layout_alignParentStart="true"
@@ -22,19 +22,12 @@
             android:layout_marginTop="0dp">
 
             <ImageView
-                android:id="@+id/profile_bound_storyOn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="4dp"
-                app:srcCompat="@drawable/profile_bound_story_on" />
-
-            <ImageView
-                android:id="@+id/profile_img"
+                android:id="@+id/profile_img2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
                 android:scaleType="centerInside"
-                app:srcCompat="@drawable/profile" />
+                app:srcCompat="@drawable/person_profile1" />
         </FrameLayout>
 
         <LinearLayout
@@ -42,28 +35,28 @@
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_marginStart="10dp"
-            android:layout_toEndOf="@id/profile"
+            android:layout_toEndOf="@id/profile2"
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/nickname"
+                android:id="@+id/nickname2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="yeonyu.yeonu"
+                android:text="hem._ni"
                 android:textColor="#000000"
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/place"
+                android:id="@+id/place2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="0dp"
                 android:layout_marginTop="0dp"
-                android:text="Seoul, Korea" />
+                android:text="Shangri-La, Taipei" />
         </LinearLayout>
 
         <ImageView
-            android:id="@+id/icon_more"
+            android:id="@+id/icon_more2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
@@ -81,10 +74,10 @@
         android:layout_height="360dp">
 
         <ImageView
-            android:id="@+id/img1"
+            android:id="@+id/img2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:srcCompat="@drawable/insta_image1" />
+            app:srcCompat="@drawable/insta_image2" />
 
         <ImageView
             android:id="@+id/icon_person_tag"
@@ -209,7 +202,7 @@
             android:layout_height="18dp"
             android:layout_alignParentStart="true"
             android:layout_marginStart="12dp"
-            app:srcCompat="@drawable/person_profile1" />
+            app:srcCompat="@drawable/profile" />
 
         <TextView
             android:id="@+id/textView2"
@@ -229,7 +222,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="4dp"
             android:layout_toEndOf="@+id/textView2"
-            android:text="h0ngjoon"
+            android:text="woob1n"
             android:textColor="#000000"
             android:textStyle="bold" />
 
@@ -248,7 +241,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="4dp"
             android:layout_toEndOf="@+id/textView4"
-            android:text="21명"
+            android:text="18명"
             android:textColor="#000000"
             android:textStyle="bold" />
 
@@ -261,7 +254,7 @@
         android:layout_marginStart="12dp"
         android:layout_marginTop="4dp"
         android:layout_marginEnd="12dp"
-        android:text="yeonyu.yeonu 2018.08.26~08.28\n단양2박3일여행... 더 보기"
+        android:text="hem._ni My Rooftop."
         android:textColor="@android:color/black" />
 
     <TextView
@@ -287,7 +280,7 @@
             android:layout_marginEnd="4dp"
             android:layout_marginBottom="4dp"
             android:layout_toStartOf="@id/favorite_on_comment1"
-            android:text="l_zieun 헐 나 이번 방학때 하려 하는데 어때ㅜㅜ"
+            android:text="ji_young.v 이쁘다♡"
             android:textColor="@android:color/black" />
 
         <ImageView
@@ -315,7 +308,7 @@
             android:layout_marginEnd="4dp"
             android:layout_marginBottom="4dp"
             android:layout_toStartOf="@id/favorite_on_comment2"
-            android:text="woo-cheol ㅋㅋㅋㅋ재밌겠다 연우 이런것도하네"
+            android:text="window-il @hem._ni 나도"
             android:textColor="@android:color/black" />
 
         <ImageView
@@ -335,7 +328,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
         android:layout_marginTop="4dp"
-        android:text="2019년 9월 30일"
+        android:text="2019년 9월 17일"
         android:textSize="10sp" />
 
 
