@@ -2,10 +2,5 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/2019spring_41class_team6" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/MA_PICADAY" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/PA2Dictionary" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/Prography_5th_android" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/groom_instaclone" vcs="Git" />
   </component>
 </project>

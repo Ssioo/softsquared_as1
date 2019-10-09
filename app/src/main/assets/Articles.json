@@ -1,0 +1,150 @@
+{
+  "Articles" : [
+    {
+      "articleId" : "1",
+      "profile" : "profile",
+      "imgs" : [
+        {
+          "img" : "insta_image1"
+        }, {
+          "img" : "insta_image2"
+        }, {
+          "img" : "insta_image3"
+        }
+      ],
+      "userId" : "yeonyu.yeonu",
+      "place" : "Seoul, Korea",
+      "description" : "2018.06.26~06.30\n단양 2박3일여행\n.\n좋은 여행 이었다.",
+      "isFavorited" : "false",
+      "favoritesPeople" : [
+        {
+          "userId" : "woob1n"
+        }, {
+          "userId" : "l_zieun"
+        }, {
+          "userId" : "sunaang_sue"
+        }
+
+      ],
+      "comments" : [
+        {
+          "commentId" : "1",
+          "userId" : "l_zieun",
+          "comment" : "헐 나도 가고싶어ㅠㅜ",
+          "isFavorited" : "false",
+          "favoritesPeople" : [
+            {
+              "userId" : "dal_xx"
+            }
+          ]
+        },
+        {
+          "commentId" : "2",
+          "userId" : "woo_cheol",
+          "comment" : "이야 연우 좋은 데 다니네",
+          "isFavorited" : "false",
+          "favoritesPeople" : []
+        },
+        {
+          "commentId" : "3",
+          "userId" : "sunaang_sue",
+          "comment" : "설마가 사람 잡..bb",
+          "isFavorited" : "true",
+          "favoritesPeople" : [
+            {
+              "userId" : "h0ngjoon"
+            }, {
+              "userId" : "sunaang_sue"
+            }
+          ]
+        }
+      ],
+      "date" : "2018년 6월 30일"
+    },
+    {
+      "articleId" : "2",
+      "profile" : "person_profile1",
+      "imgs" : [
+        {
+          "img" : "insta_image4"
+        }, {
+          "img" : "insta_image5"
+        }
+      ],
+      "userId" : "hem._ni",
+      "place" : "Tsang-ri, Taipei",
+      "description" : "My Rooftop.",
+      "isFavorited" : "false",
+      "favoritesPeople" : [
+        {
+          "userId" : "sunwo0_kim"
+        }, {
+          "userId" : "l_zieun"
+        }, {
+          "userId" : "yeonyu.yeonu"
+        }, {
+          "userId" : "h0ngjoon"
+        }
+      ],
+      "comments" : [
+        {
+          "commentId" : "4",
+          "userId" : "ji_young.v",
+          "comment" : "이쁘다~",
+          "isFavorited" : "false",
+          "favoritesPeople" : []
+        },
+        {
+          "commentId" : "5",
+          "userId" : "moon_il",
+          "comment" : "@hem._ni 나도~",
+          "isFavorited" : "false",
+          "favoritesPeople" : []
+        }
+      ],
+      "date" : "2019년 9월 30일"
+    },
+    {
+      "articleId" : "3",
+      "profile" : "person_profile2",
+      "imgs" : [
+        {
+          "img" : "insta_image6"
+        }, {
+          "img" : "insta_image7"
+        }, {
+          "img" : "insta_image8"
+        }, {
+          "img" : "insta_image9"
+        }, {
+          "img" : "insta_image10"
+        }
+      ],
+      "userId" : "sunwo0kim",
+      "place" : "",
+      "description" : "디자이너께서 만들어주신 로고!!\n.\n.\n#유니콘스토리 #unicornstory",
+      "isFavorited" : "false",
+      "favoritesPeople" : [
+        {
+          "userId" : "bokchi_13"
+        }, {
+          "userId" : "hem._ni"
+        }, {
+          "userId" : "yeonyu.yeonu"
+        }, {
+          "userId" : "h0ngjoon"
+        }
+      ],
+      "comments" : [
+        {
+          "commentId" : "6",
+          "userId" : "h0ngjoon",
+          "comment" : "UNIC까지 보고 이시국에..할뻔",
+          "isFavorited" : "false",
+          "favoritesPeople" : []
+        }
+      ],
+      "date" : "2019년 10월 8일"
+    }
+  ]
+}
