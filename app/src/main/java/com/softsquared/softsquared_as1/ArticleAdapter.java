@@ -1,6 +1,7 @@
 package com.softsquared.softsquared_as1;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,8 +10,12 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
+import com.google.android.material.tabs.TabLayout;
 import com.softsquared.softsquared_as1.Model.Article;
 
 import java.util.ArrayList;
@@ -19,16 +24,6 @@ public class ArticleAdapter extends BaseAdapter {
 
     private ArrayList<Article> ArticleList;
     private LayoutInflater layoutInflater;
-
-    private ImageView ivProfileImg;
-    private FrameLayout flImages;
-    private ViewPager vpImages;
-    private TextView tvNickname;
-    private TextView tvPlace;
-    private TextView tvDescription;
-    private TextView tvFavoritePerson;
-    private TextView tvFavoriteCount;
-    private TextView tvDate;
 
     public ArticleAdapter(ArrayList<Article> articleList, Context context) {
         ArticleList = articleList;
@@ -52,43 +47,72 @@ public class ArticleAdapter extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        convertView = layoutInflater.inflate(R.layout.post_full, parent, false);
+        final ViewHolder holder;
+
+        if (convertView == null) {
+            convertView = layoutInflater.inflate(R.layout.post_full, parent, false);
+
+            /* ViewHolder */
+            holder = new ViewHolder();
+            /* findViewByID */
+            holder.ivProfileImg = convertView.findViewById(R.id.profile_img);
+            holder.vpImages = convertView.findViewById(R.id.image_pager);
+            holder.tvImgCount = convertView.findViewById(R.id.img_count);
+            holder.tvNickname = convertView.findViewById(R.id.nickname);
+            holder.tvPlace = convertView.findViewById(R.id.place);
+            holder.tvDescription = convertView.findViewById(R.id.description_full);
+            holder.tvFavoritePerson = convertView.findViewById(R.id.nickname_like1);
+            holder.tvFavoriteCount = convertView.findViewById(R.id.like_count);
+            holder.tvDate = convertView.findViewById(R.id.date_of_article);
+
+            convertView.setTag(holder);
+        } else {
+            holder = (ViewHolder) convertView.getTag();
+        }
 
         /* Loading Article */
-        Article article = ArticleList.get(position);
-        if (article == null) {
-            return convertView;
+        final Article article = ArticleList.get(position);
+        if (article != null) {
+            /* View 조정 */
+            holder.tvNickname.setText(article.getUserId()); // UserId
+            if (article.getPlace().equals("")) {
+                holder.tvPlace.setTextSize(0.f);
+            }
+            holder.tvPlace.setText(article.getPlace()); // Place
+            holder.ivProfileImg.setImageDrawable(article.getProfile());// Profile
+            holder.imagesPagerAdapter = new ImagesPagerAdapter(article.getImgs(), convertView.getContext());
+            holder.vpImages.setAdapter(holder.imagesPagerAdapter); // Imgs
+            holder.tvImgCount.setText(holder.vpImages.getCurrentItem() + 1 + "/" + article.getImgs().size());// Img Count
+            holder.vpImages.addOnPageChangeListener(new ViewPager.SimpleOnPageChangeListener() {
+                @Override
+                public void onPageSelected(int position) {
+                    holder.tvImgCount.setText(position + 1 + "/" + article.getImgs().size());// Img Count
+                }
+            });
+            holder.tvDescription.setText(article.getUserId() + " " + article.getDescription()); // Description
+            // Comments
+            if (article.getComments() != null) {
+                holder.tvFavoritePerson.setText(article.getComments().get(0).getUserId());
+                holder.tvFavoriteCount.setText(article.getComments().size() + "명");
+            } else {
+                holder.tvFavoritePerson.setText("");
+                holder.tvFavoriteCount.setText("");
+            }
+            holder.tvDate.setText(article.getDate()); // Date
         }
-        /* findViewByID */
-        ivProfileImg = convertView.findViewById(R.id.profile_img);
-        flImages = convertView.findViewById(R.id.image_container);
-        vpImages = convertView.findViewById(R.id.image_pager);
-        tvNickname = convertView.findViewById(R.id.nickname);
-        tvPlace = convertView.findViewById(R.id.place);
-        tvDescription = convertView.findViewById(R.id.description_full);
-        tvFavoritePerson = convertView.findViewById(R.id.nickname_like1);
-        tvFavoriteCount = convertView.findViewById(R.id.like_count);
-        tvDate = convertView.findViewById(R.id.date_of_article);
-
-
-        /* View 조정 */
-        tvNickname.setText(article.getUserId()); // UserId
-        tvPlace.setText(article.getPlace()); // Place
-        ivProfileImg.setImageDrawable(article.getProfile());// Profile
-        // Imgs
-        vpImages.setAdapter(new ImagesPagerAdapter(article.getImgs(), convertView.getContext()));
-        tvDescription.setText(article.getUserId() + " " + article.getDescription()); // Description
-        // Comments
-        if (article.getComments() != null) {
-            tvFavoritePerson.setText(article.getComments().get(0).getUserId());
-            tvFavoriteCount.setText(article.getComments().size() + "명");
-        } else {
-            tvFavoritePerson.setText("");
-            tvFavoriteCount.setText("");
-        }
-        tvDate.setText(article.getDate()); // Date
-
-
         return convertView;
+    }
+
+    private static class ViewHolder {
+        private ImageView ivProfileImg;
+        private ImagesPagerAdapter imagesPagerAdapter;
+        private ViewPager vpImages;
+        private TextView tvNickname;
+        private TextView tvPlace;
+        private TextView tvDescription;
+        private TextView tvFavoritePerson;
+        private TextView tvFavoriteCount;
+        private TextView tvDate;
+        private TextView tvImgCount;
     }
 }

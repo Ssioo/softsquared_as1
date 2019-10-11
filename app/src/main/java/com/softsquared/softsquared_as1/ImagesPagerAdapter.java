@@ -15,11 +15,10 @@ import java.util.ArrayList;
 
 public class ImagesPagerAdapter extends PagerAdapter {
     private ArrayList<Drawable> imgs;
-    private LayoutInflater inflater;
+
 
     public ImagesPagerAdapter(ArrayList<Drawable> imgs, Context context) {
         this.imgs = imgs;
-        inflater = LayoutInflater.from(context);
     }
 
     @Override
