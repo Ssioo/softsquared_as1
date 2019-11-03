@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -64,6 +65,8 @@ public class ArticleAdapter extends BaseAdapter {
             holder.tvFavoritePerson = convertView.findViewById(R.id.nickname_like1);
             holder.tvFavoriteCount = convertView.findViewById(R.id.like_count);
             holder.tvDate = convertView.findViewById(R.id.date_of_article);
+            holder.tvMoreComments = convertView.findViewById(R.id.more_comment);
+            holder.lvComments = convertView.findViewById(R.id.comment_container);
 
             convertView.setTag(holder);
         } else {
@@ -82,21 +85,32 @@ public class ArticleAdapter extends BaseAdapter {
             holder.ivProfileImg.setImageDrawable(article.getProfile());// Profile
             holder.imagesPagerAdapter = new ImagesPagerAdapter(article.getImgs(), convertView.getContext());
             holder.vpImages.setAdapter(holder.imagesPagerAdapter); // Imgs
+            holder.vpImages.setCurrentItem(holder.imgShowing);
             holder.tvImgCount.setText(holder.vpImages.getCurrentItem() + 1 + "/" + article.getImgs().size());// Img Count
             holder.vpImages.addOnPageChangeListener(new ViewPager.SimpleOnPageChangeListener() {
                 @Override
                 public void onPageSelected(int position) {
                     holder.tvImgCount.setText(position + 1 + "/" + article.getImgs().size());// Img Count
+                    holder.imgShowing = position;
                 }
             });
             holder.tvDescription.setText(article.getUserId() + " " + article.getDescription()); // Description
+
             // Comments
             if (article.getComments() != null) {
                 holder.tvFavoritePerson.setText(article.getComments().get(0).getUserId());
                 holder.tvFavoriteCount.setText(article.getComments().size() + "명");
+                if (article.getComments().size() > 2)
+                    holder.tvMoreComments.setText("댓글 " + (article.getComments().size() - 2) + "개 더보기");
+                else
+                    holder.tvMoreComments.setVisibility(View.GONE);
+                // Comment ListView
+                Log.i("commentSize", String.valueOf(article.getComments().size()));
+                holder.commentAdapter = new CommentAdapter(article.getComments(), convertView.getContext());
+                holder.lvComments.setAdapter(holder.commentAdapter);
             } else {
-                holder.tvFavoritePerson.setText("");
-                holder.tvFavoriteCount.setText("");
+                holder.tvFavoritePerson.setVisibility(View.GONE);
+                holder.tvFavoriteCount.setVisibility(View.GONE);
             }
             holder.tvDate.setText(article.getDate()); // Date
         }
@@ -106,6 +120,7 @@ public class ArticleAdapter extends BaseAdapter {
     private static class ViewHolder {
         private ImageView ivProfileImg;
         private ImagesPagerAdapter imagesPagerAdapter;
+        private int imgShowing = 0;
         private ViewPager vpImages;
         private TextView tvNickname;
         private TextView tvPlace;
@@ -114,5 +129,8 @@ public class ArticleAdapter extends BaseAdapter {
         private TextView tvFavoriteCount;
         private TextView tvDate;
         private TextView tvImgCount;
+        private ListView lvComments;
+        private TextView tvMoreComments;
+        private CommentAdapter commentAdapter;
     }
 }

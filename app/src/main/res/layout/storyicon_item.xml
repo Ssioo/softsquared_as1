@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="72dp"
+    android:layout_height="96dp"
+    android:layout_marginHorizontal="4dp">
+
+    <ImageView
+        android:id="@+id/story_profile_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|top"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginBottom="16dp"
+        android:scaleType="centerInside"
+        app:srcCompat="@drawable/profile" />
+
+    <ImageView
+        android:id="@+id/icon_story_plus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="22dp"
+        app:srcCompat="@drawable/ic_add_circle_small" />
+
+    <TextView
+        android:id="@+id/story_profile_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:text="내 스토리"
+        android:textColor="@android:color/black"
+        android:textSize="11sp" />
+</FrameLayout>
